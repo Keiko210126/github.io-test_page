@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Khloe-Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="フラワーショップ">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-3.png">
+</head>
+
+<body>
+
+    <header class="page-header wrapper">
+        <a href="index.html">
+            <img class="logo" src="images/logo-2.svg" alt="Khloeフラワーショップ"></a>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="news.html">News</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header><!-- /.page-header -->
+
+    <!-- slideshow設定 -->
+    <div class="slidebox"></div>
+    <img src="images/home-bg.jpg" id="slideshow">
+    <!-- start/stopボタン -->
+    <input type="button" value="START/STOP" id="start-stop-btn">
+    <p><button id="testbtn">テスト用 cookie削除</button></p>
+    <br>
+
+    <div class="home-content wrapper">
+        <h2 class="page-title">お気に入りのお花を飾りませんか？</h2>
+        <p>季節に合わせてさまざまな種類のお花を取り揃えております。<br>大切な方へのプレゼントにもおすすめです。</p>
+
+    </div><!-- .home-content -->
+    <footer>
+        <div class="page-footer wrapper">
+            <nav>
+                <ul class="sub-nav">
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p id="copyright"><small>&copy; 2020 Khloe Flower Shop</small></p>
+    </footer>
+    <div id="privacy-panel">
+        <p>当サイトではサービス向上およびお客様により適したサービスを提供するため、クッキーを利用しています。詳しい情報は当サイトのプライバシーポリシーをご覧ください。</p>
+        <button id="agree-btn">承認する</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="js.cookie.js"></script>
+    <script>
+        'use strict';
+        /*jshint esversion:6,node:true*/
+        /*globals window,console,document*/
+        const agree = Cookies.get('cookie-agree');
+        const panel = document.getElementById('privacy-panel');
+        if (agree === 'yes') {
+            //            console.log('クッキーを確認しました');
+            document.body.removeChild(panel);
+        } else {
+//            console.log('クッキーを確認できません');
+            document.getElementById('agree-btn').onclick = function() {
+                //Cookies.set ('クッキー名', '値', {expires:有効期限})
+                Cookies.set('cookie-agree', 'yes', {
+                    expires: 0
+                });
+                document.body.removeChild(panel);
+            };
+        }
+
+        // クッキー削除（テスト用）
+        document.getElementById('testbtn').onclick = function() {
+            Cookies.remove('cookie-agree');
+        };
+    </script>
+</body>
+
+</html>
