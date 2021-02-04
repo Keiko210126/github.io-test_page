@@ -1,0 +1,443 @@
+@charset "utf-8";
+
+/* 共通部分
+----------------------------*/
+
+html {
+    /* 基準フォントサイズを16px */
+    font-size: 100%;
+}
+
+body {
+    /* フォントについて */
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.7;
+    color: #402717;
+
+}
+
+a {
+    /* リンク文字の下線をなしに */
+    text-decoration: none;
+}
+
+img {
+    /* 画像が親要素よりも大きくなることを防ぐ */
+    max-width: 100%;
+
+}
+
+.wrapper
+
+/* ページの最大幅と余白を指定 */
+    {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+    /* 背景画像を画面いっぱいに設定 */
+    background-size: cover;
+    /* 包み込む感じ */
+    background-position: center top;
+    /* 水平方向中央 */
+    background-repeat: no-repeat;
+    /* 1枚のみ貼り付け */
+}
+
+
+
+/* ボタン */
+
+/* Header
+---------------------------------------*/
+
+header {
+    position: fixed;
+    width: 100%;
+    color: #402717;
+    background-color: #fff;
+    display: block;
+}
+
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    list-style: none;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.main-nav li {
+    /* リストアイテムの外余白 */
+    margin-left: 26px;
+}
+
+.main-nav a {
+    /* リンク文字の色 */
+    color: #212121;
+}
+
+.main-nav a:hover {
+    /* リンク文字のhover時の色 */
+    color: #00cc99;
+
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HOME
+-------------------------------------------*/
+#slideshow {
+    /* index.html用の背景画像を指定 */
+    background-image: url(../images/home-bg.jpg);
+    width: 100%;
+    height: 100%;
+
+}
+
+#start-stop-btn {
+    font: bold;
+    color:white;
+    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    background-color: #00cc99;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.home-content wrapper {
+    color: #212121;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+#privacy-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 20px 60px 20px 60px;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: flex-start;
+}
+#privacy-panel p {
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+#agree-btn {
+    flex: 0 0 150px;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px;
+    font-size: 0.9rem;
+    background: #00cc99;
+    color: #fff;
+
+}
+#agree-btn:hover {
+    background: #00cc99;
+    border: none;
+}
+#agree-btn:active {
+    background: #00cc99;
+    border: none;
+}
+
+#testbtn {
+    background-color: #00cc99;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    
+}
+/* NEWS
+--------------------------------------------*/
+#news {
+    background-image: url(../images/ELL84_smoketreenoshinme_TP_V4.jpg);
+    height: 1000px;
+    margin-bottom: 40px;
+}
+
+.page-title-news {
+    margin-bottom: 20px;
+}
+
+.page-sub-title-news {
+    margin-bottom: 20px;
+}
+
+#ws {
+    padding: 10px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+#topics {
+    display: block;
+}
+
+
+/* ABOUT US
+-------------------------------------------*/
+#about-us {
+    background-image: url(../images/about-us-bg.jpg);
+    height: 1000px;
+    margin-bottom: 40px;
+
+}
+
+.page-title-about-us {
+    margin-bottom: 40px;
+}
+
+.sub-title {
+    display: block;
+    padding: 10px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#shop-infomation {
+    display: flex;
+    margin-top: 30px;
+
+}
+
+#address-1,
+#address-2 {
+    display: block;
+    margin-left: 40px;
+
+}
+
+#address-1 {
+    text-align: start;
+}
+
+#address-2 {
+    margin-right: 70px;
+}
+
+.link {
+    margin-left: 40px;
+    padding: 40px 40px 40px 0;
+}
+
+.link a img {
+    margin: 20px;
+}
+.location-map {
+    display: block;
+    width: 60%;
+    margin-left: 40px;
+}
+
+iframe {
+    width: 100%;
+}
+
+article {
+    display: flex;
+}
+
+/* GALLERY
+------------------------------------------------ */
+#gallery {
+    background-image: url(../images/gallery-bg.jpg);
+    height: 1000px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+/* CONTACT
+---------------------------------------------------*/
+#contact {
+    background-image: url(../images/contact-bg.jpg);
+    height: 1000px;
+    margin-bottom: 40px;
+}
+
+.page-title-contact {
+    margin-bottom: 50px;
+}
+
+#inquiry {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+    display: block;
+    padding: 0 4%;
+    width: 750px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    border: 1px #402717 solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+    margin-left: 30px;
+    width: 200px;
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    margin-left: 10px;
+}
+
+dt span {
+    color: #fff;
+    background-color: darkgreen;
+    font-size: 0.8em;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 2px;
+}
+
+input[type=checkbox] {
+    margin: 10px 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input[type=submit] {
+    border: none;
+    cursor: pointer;
+    line-height: 2;
+    background-color: darkgreen;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* FOOTER
+--------------------------------------------------*/
+
+footer {
+    display: block;
+    width: 100%;
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: left;
+    text-transform: uppercase;
+    list-style: none;
+    height: 50px;
+    margin-top: 40px;
+    background-color: darkgreen;
+}
+
+.sub-nav li a {
+    color: #fff;
+    margin: 20px;
+}
+
+#copyright {
+    text-align: center;
+}
+
+/* モバイル版 */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+
+    /* NEWS */
+    .news-contents {
+        flex-direction: column;
+    }
+
+    #news .page-title {
+        margin-top: 30px;
+    }
+
+    /* ABOUT-US */
+    article {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #address-1,
+    #address-2 {
+        margin: 20px;
+    }
+    /* GALLERY */
+    .gallery-content {
+        margin-top: 20%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    /* CONTACT */
+
+    input[type="text"],
+    input[type="email"],
+    input[type="checkbox"],
+    textarea {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+}

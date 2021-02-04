@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Khloe-Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="フラワーショップ">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="images/favicon-3.png">
+</head>
+
+<body>
+    <div id="contact" class="big-bg">
+        <header class="page-header wrapper">
+            <!-- class名を複数設定する 間に空白必要 -->
+            <h1>
+                <a href="index.html">
+                    <img class="logo" src="images/logo-2.svg" alt="Khloeフラワーショップ"></a>
+            </h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header><!-- /.page-header -->
+    </div>
+    <div class="contact-content wrapper">
+    <h2 class="page-title-contact">CONTACT</h2>
+    <h3 id="inquiry">下記フォームにお問い合わせ内容を入力ください。</h3>
+    </div>
+    <div id="form">
+        <form name="contact" action="" method="get">
+            <dl class="inner">
+                <dt class="label required">●お名前<span>必須</span><input type="text" placeholder="氏名 名前" id="name" name="your-name"></dt>
+                <dt class="label required">●メールアドレス<span>必須</span><input type="email" placeholder="khloe@example.com" id="email" name="your-email"></dt>
+                <dt class="label required">●当店を知ったきっかけを教えてください。(複数回答可)</dt>
+                <dt class="label required">
+                <input type="checkbox" name="reason" value="当店ホームページ"><label for="HP">当店ホームページ</label>
+                <input type="checkbox" name="reason" value="SNS"><label for="SNS">SNS</label>
+                <input type="checkbox" name="reason" value="友人・知人からの紹介"><label for="frineds&familiers">友人・知人からの紹介</label>
+                    <input type="checkbox" name="reason" value="その他"><label for="other">その他</label></dt>
+                <dt class="label required">●問い合わせ内容<span>必須</span></dt><dt class="label required"><textarea name="form" id="contact-form"></textarea></dt><br>
+                <dt class="label required"><input type="submit" class="button" value="送信する"></dt>
+            </dl>
+        </form>
+    </div>
+
+    <footer>
+        <div class="page-footer wrapper">
+            <nav>
+                <ul class="sub-nav">
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+                    <p id="copyright"><small>&copy; 2020 Khloe Flower Shop</small></p>
+    </footer>
+</body>
+
+</html>
